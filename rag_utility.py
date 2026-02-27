@@ -2,7 +2,8 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-from langchain_community.document_loaders import unstructured, UnstructuredPDFLoader
+from langchain_community.document_loaders import  UnstructuredPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
@@ -21,7 +22,7 @@ llm = ChatGroq(
 )
 
 def process_document_to_chroma_db(file_path):
-    loader = UnstructuredPDFLoader(file_path)
+    loader = PyPDFLoader(file_path)
     documents = loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter(

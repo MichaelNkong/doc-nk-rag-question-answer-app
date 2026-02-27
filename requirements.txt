@@ -12,3 +12,5 @@ langchain-unstructured
 sentence-transformers
 langchain-classic
 pytesseract
+unstructured
+opencv-python
