@@ -18,6 +18,7 @@ uploaded_files = st.file_uploader(
 
 if uploaded_files:
   try:
+    processed_files = []
     for uploaded_file in uploaded_files:
         if uploaded_file.size > MAX_FILE_SIZE_BYTES:
             st.error(
@@ -32,10 +33,11 @@ if uploaded_files:
 
         # Process PDF to Chroma vector store
         with st.spinner("Processing PDFs and creating embeddings..."):
-            if process_document_to_chroma_db(save_path):
-                  st.success("Documents processed successfully ✅")
-            else:
-                  st.error(f"Error processing document:")
+            process_document_to_chroma_db(save_path)
+            processed_files.append(uploaded_file.name)
+    if processed_files:
+      st.success(f"Documents processed successfully ✅\n" +
+                           "\n".join(processed_files))
 
   except Exception as e:
    st.error(f"Error processing document: {e}")
