@@ -3,7 +3,7 @@
 
 A production-style Retrieval-Augmented Generation (RAG) application that allows users to upload multiple PDFs and ask questions across all documents using an LLM.
 
-Built with modern LLM tooling including LangChain, Chroma, HuggingFace embeddings, and Groq-hosted LLaMA models.
+Built with modern LLM tooling including LangChain, Chroma, HuggingFace embeddings, and Groq-hosted LLaMA models. App can be found with the link: https://doc-nk-rag-question-answer-app-qzyvouzxzbmfdqv3h2niby.streamlit.app/. You can try it out
 
 # Features
 
@@ -86,25 +86,13 @@ RecursiveCharacterTextSplitter
 
 RetrievalQA
 
-#Why LangChain?
+# Why LangChain?
 
 Modular LLM pipeline design
 
 Easy retriever-chain integration
 
 Production-ready abstraction for RAG**
-
-Session state management
-
-Displaying answers and sources
-
-Why Streamlit?
-
-Rapid prototyping
-
-Clean Python-based UI
-
-Great for ML demos and deployment
 
 
 3️⃣ ChromaDB
