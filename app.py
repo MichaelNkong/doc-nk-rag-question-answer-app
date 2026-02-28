@@ -1,5 +1,7 @@
 import os
 import streamlit as st
+from sqlalchemy import except_
+
 from rag_utility import process_document_to_chroma_db, answer_question
 
 working_dir = os.getcwd()
@@ -15,6 +17,7 @@ uploaded_files = st.file_uploader(
 )
 
 if uploaded_files:
+  try:
     for uploaded_file in uploaded_files:
         if uploaded_file.size > MAX_FILE_SIZE_BYTES:
             st.error(
@@ -33,6 +36,9 @@ if uploaded_files:
                   st.success("Documents processed successfully ✅")
             else:
                   st.error(f"Error processing document:")
+
+  except Exception as e:
+   st.error(f"Error processing document: {e}")
 
 
 # Ask question
