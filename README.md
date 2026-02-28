@@ -5,6 +5,19 @@ A production-style Retrieval-Augmented Generation (RAG) application that allows 
 
 Built with modern LLM tooling including LangChain, Chroma, HuggingFace embeddings, and Groq-hosted LLaMA models. App can be found with the link: https://doc-nk-rag-question-answer-app-qzyvouzxzbmfdqv3h2niby.streamlit.app/. You can try it out
 
+# Short demo
+ Select a pdf file and ask questions about the document
+
+
+
+
+
+https://github.com/user-attachments/assets/58fc77c8-22b9-4a90-bdfc-12444f15f0e5
+
+
+
+ 
+ 
 # Features
 
 ✅ Upload multiple PDF documents
